@@ -9,7 +9,9 @@ class Hero(models.Model):
 class todo(models.Model):
     task = models.CharField(max_length=60)
     priority = models.CharField(max_length=60)
-    duedate = models.DateField(null=True)
+    duedate = models.DateField()
     def __str__(self):
-        return self        
+        return self   
+
+          
 
