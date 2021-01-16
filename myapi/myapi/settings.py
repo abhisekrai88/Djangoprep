@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework.authtoken', # <-- Here
     #local apps
-    'myapi.core'
+    'myapi.core',
+    'myapi.crudapp'
 ]
 
 REST_FRAMEWORK = {

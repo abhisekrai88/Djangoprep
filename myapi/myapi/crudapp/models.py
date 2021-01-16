@@ -11,5 +11,5 @@ class Belonging(models.Model):
 class Borrowed(models.Model):
     what = models.ForeignKey(Belonging, on_delete=models.CASCADE)
     to_who = models.ForeignKey(Friend, on_delete=models.CASCADE)
-    When = models.DateTimeField(auto_now_add=True)
+    when = models.DateTimeField(auto_now_add=True)
     returned = models.DateTimeField(null=True, blank=True)
