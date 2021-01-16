@@ -19,6 +19,8 @@ from django.urls import include, path
 from rest_framework import routers
 from myapi.core import views
 from django.conf.urls import url, include
+from django.contrib import admin
+
 
 router = routers.DefaultRouter()
 router.register(r'friends', myapp_views.FriendViewset)
@@ -29,4 +31,6 @@ urlpatterns = [
     path('hello/', views.HelloView.as_view(), name='hello'),
     path('api-token-auth/', obtain_auth_token, name='api_token_auth'),  
     path('api/crudops/', include(router.urls)),
+    path('admin/', admin.site.urls),
+
 ]
