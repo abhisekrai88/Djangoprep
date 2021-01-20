@@ -1,5 +1,3 @@
-from django.db.models import manager
-from simplecrm.crmapp.models import INDCHOICES
 from django.db import models
 from djmoney.models.fields import MoneyField
 from django.contrib.auth.models import User

@@ -15,7 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from myapi import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path (r'employee', views.EmployeeAPIView.as_view(), name='employee-list'),
+    path(r'department', views.DepartmentAPIView.as_view(), name='department-list'),
+    path(r'appraisal', views.AppraisalAPIView.as_view(), name='appraisal-list')
 ]
