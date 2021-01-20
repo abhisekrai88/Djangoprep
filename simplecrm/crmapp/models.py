@@ -15,7 +15,7 @@ INDCHOICES = (
 )
 
 class Account(models.Model):
-    name = models.CharField("Name of Account", "Name", max_length=64)
+    name = models.CharField("Name of Account",  max_length=64)
     email = models.EmailField(blank = True, null = True)
     phone = models.CharField(max_length=20, blank = True, null = True)
     industry = models.CharField("Industry Type", max_length=255, choices=INDCHOICES, blank=True, null=True)
