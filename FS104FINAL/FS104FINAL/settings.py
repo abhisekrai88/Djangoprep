@@ -31,7 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'myapi.apps.MyapiConfig',
+    
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'corsheaders',
     'djmoney',
     'rest_framework',
+    'FS104FINAL.myapi'
     
 ]
 

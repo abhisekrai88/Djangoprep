@@ -32,16 +32,16 @@ class Employee(models.Model):
 
 class Department(models.Model):
     department = models.CharField("Department", max_length=50, choices=INDCHOICES, blank = True, null = True)
-    manager = models.ForeignKey("Manager", User, related_name='employee_name')
+    manager = models.ForeignKey(Employee, related_name='employee_name', on_delete=models.CASCADE)
     Active = models.BooleanField(default=False)
     
     def __str__(self):
         return self.department
 
 class Appraisal(models.Model):
-    name = models.ForeignKey("Employee", User, related_name='employee_name')
+    name = models.ForeignKey(Employee,  on_delete=models.CASCADE)
     grade = models.CharField("Performace Grade", choices=PERFGRADE, max_length=20, blank = True, null = True)
-    year = models.IntegerField("Year", max_length=4, blank=True, null=True)
+    year = models.IntegerField("Year",blank=True, null=True)
 
     def __str__(self):
         return self.name
